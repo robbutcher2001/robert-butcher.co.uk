@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Domain Apex Stack
+Resources:
+  #S3 Dist Bucket
+  CesFeDistributionBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: Private
+      BucketName: 'domain-apex-fe-distribution'
+      VersioningConfiguration:
+        Status: Enabled
+  LambdaStaticDeploymentRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: 'domain-apex-s3-static-deployment-role'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/AmazonS3FullAccess'
+        - 'arn:aws:iam::aws:policy/AWSCodePipelineFullAccess'
+  #Lambda Function Definitions
+  StaticS3DeploymentFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: lambda/deployment/static-s3-deployer.handler
+      Runtime: nodejs6.10
+      Code:
+        S3Bucket: 'lambda-source-location'
+        S3Key: %{LambdaSourceKey}
+      Role:
+        Fn::GetAtt:
+          - LambdaStaticDeploymentRole
+          - Arn
+      MemorySize: 256
+      Timeout: 300
