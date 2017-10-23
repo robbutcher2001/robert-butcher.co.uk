@@ -1,0 +1,14 @@
+{
+  "name": "robert-butcher.co.uk-middleware",
+  "version": "0.0.1",
+  "description": "Lambda functions to aid content on domain apex",
+  "main": "static-s3-deployer.js",
+  "author": "Rob Butcher",
+  "dependencies": {
+    "aws-sdk": "^2.133.0",
+    "mime-types": "^2.1.15",
+    "mkdirp": "^0.5.1",
+    "path": "^0.12.7",
+    "yauzl": "^2.8.0"
+  }
+}
