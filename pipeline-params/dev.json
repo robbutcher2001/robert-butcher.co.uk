@@ -1,6 +1,7 @@
 {
   "Parameters": {
     "Env": "dev",
-    "PublicURL": "test.robertbutcher.co.uk"
+    "PublicURL": "test.robertbutcher.co.uk",
+    "HostedZoneId": "Z36L4CDWNLF2IB"
   }
 }
