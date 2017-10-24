@@ -45,5 +45,3 @@ Resources:
         Fn::GetAtt:
           - LambdaStaticDeploymentRole
           - Arn
-      MemorySize: 256
-      Timeout: 300
