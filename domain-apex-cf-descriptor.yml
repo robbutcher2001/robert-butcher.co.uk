@@ -104,8 +104,6 @@ Resources:
             Fn::Join: [ '-', [ 'origin', !GetAtt DomainApexFeDistributionBucket.DomainName ] ]
           ForwardedValues:
             QueryString: true
-            Headers:
-            - '*'
             Cookies:
               Forward: all
           ViewerProtocolPolicy: redirect-to-https
