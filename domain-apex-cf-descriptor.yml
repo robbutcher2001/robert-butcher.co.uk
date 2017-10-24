@@ -31,7 +31,6 @@ Resources:
   StaticS3DeploymentFunction:
     Type: AWS::Lambda::Function
     Properties:
-      FunctionName: StaticS3DeployerFunction
       Handler: lambda/deployment/static-s3-deployer.handler
       Runtime: nodejs6.10
       Code:
