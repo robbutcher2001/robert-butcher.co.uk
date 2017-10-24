@@ -86,6 +86,8 @@ Resources:
         HttpVersion: http2
         ViewerCertificate:
           # AcmCertificateArn: !Ref DNSCertARN
+          # Remove CloudFrontDefaultCertificate when DNSCert is usable
+          CloudFrontDefaultCertificate: true
           SslSupportMethod: sni-only
         Origins:
         - DomainName: !GetAtt DomainApexFeDistributionBucket.DomainName
