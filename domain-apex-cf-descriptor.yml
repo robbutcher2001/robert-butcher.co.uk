@@ -45,3 +45,4 @@ Resources:
         Fn::GetAtt:
           - LambdaStaticDeploymentRole
           - Arn
+      Timeout: 30
