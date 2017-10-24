@@ -3,9 +3,15 @@ Description: Domain Apex Stack
 Parameters:
   Env:
     Type: String
+  PublicURL:
+    Type: String
+  DNSCertARN:
+    Type: String
+  S3OriginAccessIdentity:
+    Type: String
 Resources:
   #S3 Dist Bucket
-  CesFeDistributionBucket:
+  DomainApexFeDistributionBucket:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
@@ -13,6 +19,27 @@ Resources:
         Fn::Join: [ '-', [ 'domain-apex-fe-distribution', !Ref Env ] ]
       VersioningConfiguration:
         Status: Enabled
+  DomainApexFeDistributionBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref DomainApexFeDistributionBucket
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !Ref S3OriginAccessIdentity
+            Action:
+              - 's3:GetObject'
+            Resource:
+              Fn::Join: [ '', [ !GetAtt DomainApexFeDistributionBucket.Arn, '/*' ] ]
+          - Effect: Allow
+            Principal:
+              AWS:
+                - !Ref S3OriginAccessIdentity
+            Action:
+              - 's3:ListBucket'
+            Resource: !GetAtt DomainApexFeDistributionBucket.Arn
   LambdaStaticDeploymentRole:
     Type: AWS::IAM::Role
     Properties:
@@ -46,3 +73,37 @@ Resources:
           - LambdaStaticDeploymentRole
           - Arn
       Timeout: 30
+  #CloudFront distro to sit in front of bucket and reduce outbound cost
+  DomainApexDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Enabled: true
+        Comment:
+          Fn::Join: [ '', [ 'DomainApex Disto [', !Ref Env, ']' ] ]
+        Aliases:
+        - !Ref PublicURL
+        HttpVersion: http2
+        ViewerCertificate:
+          # AcmCertificateArn: !Ref DNSCertARN
+          SslSupportMethod: sni-only
+        Origins:
+        - DomainName: !GetAtt DomainApexFeDistributionBucket.DomainName
+          Id:
+            Fn::Join: [ '-', [ 'origin', !GetAtt DomainApexFeDistributionBucket.DomainName ] ]
+          S3OriginConfig:
+            OriginAccessIdentity: !Ref S3OriginAccessIdentity
+        DefaultCacheBehavior:
+          AllowedMethods:
+          - GET
+          - HEAD
+          - OPTIONS
+          TargetOriginId:
+            Fn::Join: [ '-', [ 'origin', !GetAtt DomainApexFeDistributionBucket.DomainName ] ]
+          ForwardedValues:
+            QueryString: true
+            Headers:
+            - '*'
+            Cookies:
+              Forward: all
+          ViewerProtocolPolicy: redirect-to-https
