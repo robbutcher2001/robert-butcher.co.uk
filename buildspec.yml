@@ -13,4 +13,5 @@ phases:
 artifacts:
   files:
     - dist/**/*
+    - pipeline-params/**/*
     - domain-apex-cf-descriptor.yml

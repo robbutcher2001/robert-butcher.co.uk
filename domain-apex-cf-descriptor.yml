@@ -1,18 +1,23 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Domain Apex Stack
+Parameters:
+  Env:
+    Type: String
 Resources:
   #S3 Dist Bucket
   CesFeDistributionBucket:
     Type: AWS::S3::Bucket
     Properties:
       AccessControl: Private
-      BucketName: 'domain-apex-fe-distribution'
+      BucketName:
+        Fn::Join: [ '-', [ 'domain-apex-fe-distribution', !Ref Env ] ]
       VersioningConfiguration:
         Status: Enabled
   LambdaStaticDeploymentRole:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: 'domain-apex-s3-static-deployment-role'
+      RoleName:
+        Fn::Join: [ '-', [ 'domain-apex-s3-static-deployment-role', !Ref Env ] ]
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
