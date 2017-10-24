@@ -28,7 +28,7 @@ Resources:
           - Effect: Allow
             Principal:
               AWS:
-                - !Ref S3OriginAccessIdentity
+                - Fn::Join: [ ' ', [ 'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity', !Ref S3OriginAccessIdentity ] ]
             Action:
               - 's3:GetObject'
             Resource:
@@ -36,7 +36,7 @@ Resources:
           - Effect: Allow
             Principal:
               AWS:
-                - !Ref S3OriginAccessIdentity
+                - Fn::Join: [ ' ', [ 'arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity', !Ref S3OriginAccessIdentity ] ]
             Action:
               - 's3:ListBucket'
             Resource: !GetAtt DomainApexFeDistributionBucket.Arn
@@ -63,6 +63,8 @@ Resources:
   StaticS3DeploymentFunction:
     Type: AWS::Lambda::Function
     Properties:
+      FunctionName:
+        Fn::Join: [ '-', [ 'StaticS3DeployerFunction', !Ref Env ] ]
       Handler: lambda/deployment/static-s3-deployer.handler
       Runtime: nodejs6.10
       Code:
@@ -80,7 +82,7 @@ Resources:
       DistributionConfig:
         Enabled: true
         Comment:
-          Fn::Join: [ '', [ 'DomainApex Disto [', !Ref Env, ']' ] ]
+          Fn::Join: [ '', [ 'DomainApex Distro [', !Ref Env, ']' ] ]
         Aliases:
         - !Ref PublicURL
         HttpVersion: http2
@@ -94,7 +96,8 @@ Resources:
           Id:
             Fn::Join: [ '-', [ 'origin', !GetAtt DomainApexFeDistributionBucket.DomainName ] ]
           S3OriginConfig:
-            OriginAccessIdentity: !Ref S3OriginAccessIdentity
+            OriginAccessIdentity:
+              Fn::Join: [ '', [ 'origin-access-identity/cloudfront/', !Ref S3OriginAccessIdentity ] ]
         DefaultCacheBehavior:
           AllowedMethods:
           - GET
