@@ -12,7 +12,7 @@ Parameters:
   S3OriginAccessIdentity:
     Type: String
 Conditions:
-  CreateProdResources: !Equals [ !Ref Env, prod ]
+  CreateProdResources: !Equals [ !Ref Env, 'prod' ]
 Resources:
   #S3 Dist Bucket
   DomainApexFeDistributionBucket:
