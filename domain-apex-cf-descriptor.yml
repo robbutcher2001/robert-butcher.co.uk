@@ -89,8 +89,7 @@ Resources:
           Fn::Join: [ '', [ 'DomainApex Distro [', !Ref Env, ']' ] ]
         Aliases:
         - !Ref PublicURL
-        - Condition: CreateProdResources
-          Fn::Join: [ '.', [ 'www', !Ref PublicURL ] ]
+        - Fn::Join: [ '.', [ 'www', !Ref PublicURL ] ]
         DefaultRootObject: index.html
         HttpVersion: http2
         ViewerCertificate:
