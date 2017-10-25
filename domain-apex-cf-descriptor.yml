@@ -126,7 +126,7 @@ Resources:
         DNSName: !GetAtt DomainApexDistribution.DomainName
         EvaluateTargetHealth: false
         HostedZoneId: Z2FDTNDATAQYW2
-  DomainApexDistributionDNSRecord:
+  DomainApexDistributionWWWDNSRecord:
     Type: AWS::Route53::RecordSet
     Condition: CreateProdResources
     Properties:
