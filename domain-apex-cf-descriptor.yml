@@ -93,10 +93,8 @@ Resources:
         DefaultRootObject: index.html
         HttpVersion: http2
         ViewerCertificate:
-          # AcmCertificateArn: !Ref DNSCertARN
-          # Remove CloudFrontDefaultCertificate when DNSCert is usable
-          CloudFrontDefaultCertificate: true
-          # SslSupportMethod: sni-only
+          AcmCertificateArn: !Ref DNSCertARN
+          SslSupportMethod: sni-only
         Origins:
         - DomainName: !GetAtt DomainApexFeDistributionBucket.DomainName
           Id:
