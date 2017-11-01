@@ -113,8 +113,7 @@ Resources:
             QueryString: true
             Cookies:
               Forward: all
-          # ViewerProtocolPolicy: redirect-to-https
-          ViewerProtocolPolicy: allow-all
+          ViewerProtocolPolicy: redirect-to-https
   DomainApexDistributionDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:
