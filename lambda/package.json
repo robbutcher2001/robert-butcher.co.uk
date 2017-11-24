@@ -6,7 +6,7 @@
   "author": "Rob Butcher",
   "dependencies": {
     "aws-sdk": "^2.133.0",
-    "mime-types": "^2.1.15",
+    "mime-types": "^2.1.17",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "yauzl": "^2.8.0"
