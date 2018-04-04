@@ -151,7 +151,8 @@ var uploadFiles = (s3Destination, distFiles) => {
       const params = {
         Key: distFile.key,
         Body: distFile.body,
-        ContentType: mime.lookup(distFile.key)
+        //ContentType: `${mime.lookup(distFile.key)}; ${mime.charset(distFile.key)}`
+        ContentType: mime.contentType(path.extname(distFile.key))
       };
       return s3Destination.putObject(params).promise();
     })
