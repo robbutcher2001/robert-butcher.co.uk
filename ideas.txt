@@ -1,0 +1,18 @@
+For this site, I could use one of these bad boys (best of the bunch I reckon):
+- https://html5up.net/solid-state
+- https://html5up.net/helios
+
+Ideas:
+- Rob Butcher
+- Software Engineer
+- Audiophile
+- Home Automation Maniac (<something else?> you'll be questioned on this so make it good! DevOps Maniac?)
+
+- Can then have each project* I've worked on with: title; 5-6 words about main achievement; tech worked with; time on project
+- Explanation of DevOps flow used to deploy this website, mentioning CloudFormation and CodePipeline
+	- Short 30 second video made on iMovie to show me editing dev branch to add new 'project article*', pipeline, test URL, merge on Github, pipeline, prod URL
+- A link to my Github for HomeAutomation - maybe even short video of lights changing? Timelapse?
+- DJ section with music loves and link to a few mixes.
+ - Leads on to link to private project I've worked on, React music app
+
+Make it a fun site with fun language - a place people want to read on.

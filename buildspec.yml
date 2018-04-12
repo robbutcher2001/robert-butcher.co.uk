@@ -10,6 +10,9 @@ phases:
       - aws s3 cp lambda-source-${timestamp}.zip s3://${LambdaSourceBucket}
       - sed -ie "s/%{LambdaSourceKey}/lambda-source-${timestamp}.zip/g" domain-apex-cf-descriptor.yml
       - aws s3 cp domain-apex-cf-descriptor.yml s3://${LambdaSourceBucket}
+      - npm install
+      - npm run build
+      - cp -r src/boilerplate-assets/ dist/.
 artifacts:
   files:
     - dist/**/*
