@@ -12,7 +12,7 @@ Ideas:
 - Explanation of DevOps flow used to deploy this website, mentioning CloudFormation and CodePipeline
 	- Short 30 second video made on iMovie to show me editing dev branch to add new 'project article*', pipeline, test URL, merge on Github, pipeline, prod URL
 - A link to my Github for HomeAutomation - maybe even short video of lights changing? Timelapse?
-- DJ section with music loves and link to a few mixes.
+- DJ section with music loves and link to a few mixes and some of my fav mixes by other artists
  - Leads on to link to private project I've worked on, React music app
 
 Make it a fun site with fun language - a place people want to read on.

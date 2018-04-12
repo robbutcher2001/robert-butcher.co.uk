@@ -1,8 +1,6 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-//
-// import App from './components/app';
-//
-// ReactDOM.render(<App />, document.getElementById('mnt'));
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('oioi');
+import App from './components/app';
+
+ReactDOM.render(<App />, document.getElementById('mnt'));
