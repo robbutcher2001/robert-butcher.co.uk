@@ -13,6 +13,7 @@ phases:
       - npm install
       - npm run build
       - cp -r src/boilerplate-assets/ dist/.
+      - cp -r src/content/images/ dist/.
 artifacts:
   files:
     - dist/**/*
