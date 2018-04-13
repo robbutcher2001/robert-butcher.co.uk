@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-import Header from './header';
-import { headerContent } from '../content/header';
+import Header from '../../components/header';
+import { headerContent } from '../../content/header';
 
-import Banner from './banner';
-import { bannerContent } from '../content/banner';
+import Banner from '../../components/banner';
+import { bannerContent } from '../../content/banner';
 
-export default class App extends Component {
+import Synopses from './synopses';
+
+export default class Homepage extends Component {
   render() {
     return (
       <div id='page-wrapper'>
@@ -23,6 +25,7 @@ export default class App extends Component {
           interestB={bannerContent.interestB}
           interestC={bannerContent.interestC}
         />
+        <Synopses />
       </div>
     );
   }
