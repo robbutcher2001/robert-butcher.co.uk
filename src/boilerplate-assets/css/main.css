@@ -18,6 +18,11 @@
 		vertical-align: baseline;
 	}
 
+	mark {
+		background-color: transparent;
+    color: #4c5c96;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -2169,7 +2174,7 @@
 	}
 
 		.image img {
-			border-radius: 5px;
+			border-radius: 10px;
 			display: block;
 		}
 

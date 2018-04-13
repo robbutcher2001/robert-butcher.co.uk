@@ -9,6 +9,7 @@ Ideas:
 - Home Automation Maniac (<something else?> you'll be questioned on this so make it good! DevOps Maniac?)
 
 - Can then have each project* I've worked on with: title; 5-6 words about main achievement; tech worked with; time on project
+	- maybe just the top section is high level about the Software Engineering things I've done with a 'Learn More >' or 'CV >' button going to a separate page to detail these projects in the style on the line above
 - Explanation of DevOps flow used to deploy this website, mentioning CloudFormation and CodePipeline
 	- Short 30 second video made on iMovie to show me editing dev branch to add new 'project article*', pipeline, test URL, merge on Github, pipeline, prod URL
 - A link to my Github for HomeAutomation - maybe even short video of lights changing? Timelapse?
