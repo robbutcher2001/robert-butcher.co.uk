@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 
-import { engineering } from '../content/synopses/engineering';
-import { music } from '../content/synopses/music';
+import Header from './header';
+import { headerContent } from '../content/header';
+
+import Banner from './banner';
+import { bannerContent } from '../content/banner';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
-        {engineering.title}
-        {music.title}
+      <div id='page-wrapper'>
+        <Header
+          title={headerContent.title}
+          topButtonText={headerContent.topButtonText}
+          topButtonLink={headerContent.topButtonLink}
+        />
+        <Banner
+          title={bannerContent.title}
+          avatarUrl={bannerContent.avatarUrl}
+          avatarLink={bannerContent.avatarLink}
+          interestA={bannerContent.interestA}
+          interestB={bannerContent.interestB}
+          interestC={bannerContent.interestC}
+        />
       </div>
     );
   }
