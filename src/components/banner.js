@@ -12,7 +12,7 @@ const Banner = ({
   return (
     <section id='banner'>
       <div className='inner'>
-        <a href={avatarLink} className='image'><img src={avatarUrl} alt='Avatar image' /></a>
+        <a href={avatarLink} className='image avatar'><img src={avatarUrl} alt='Avatar image' /></a>
         <h2>{title}</h2>
         <p>{interestA} <mark>|</mark> {interestB} <mark>|</mark> {interestC}</p>
       </div>

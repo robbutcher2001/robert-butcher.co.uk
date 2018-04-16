@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 import SynopsisSection from '../../components/synopsis-section';
-import { devopsContent } from '../../content/synopses/devops';
-import { engineeringContent } from '../../content/synopses/engineering';
-import { musicContent } from '../../content/synopses/music';
-import { homeautomationContent } from '../../content/synopses/homeautomation';
+import { devopsContent } from '../../content/homepage/synopses/devops';
+import { engineeringContent } from '../../content/homepage/synopses/engineering';
+import { musicContent } from '../../content/homepage/synopses/music';
+import { homeautomationContent } from '../../content/homepage/synopses/homeautomation';
 
 export default class Synopses extends Component {
   render() {

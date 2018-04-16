@@ -2173,6 +2173,10 @@
 		position: relative;
 	}
 
+		.image.avatar {
+    	margin-bottom: 20px;
+		}
+
 		.image img {
 			border-radius: 10px;
 			display: block;

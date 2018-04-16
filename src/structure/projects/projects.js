@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/header';
-import { headerContent } from '../../content/homepage/header';
+import { headerContent } from '../../content/projects/header';
 
 import Banner from '../../components/banner';
-import { bannerContent } from '../../content/homepage/banner';
-
-import Synopses from './synopses';
+import { bannerContent } from '../../content/projects/banner';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -28,7 +26,6 @@ export default class Homepage extends Component {
           interestB={bannerContent.interestB}
           interestC={bannerContent.interestC}
         />
-        <Synopses />
         <Footer
           title={footerContent.title}
           prose={footerContent.prose}
