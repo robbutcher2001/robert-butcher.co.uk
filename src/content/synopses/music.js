@@ -1,10 +1,10 @@
 const musicContent = {
-  direction: 'left',
-  imageUrl: '/content/images/2.jpg',
-  style: 'style2',
+  direction: 'right',
+  imageUrl: '/content/images/3.jpg',
+  style: 'style3',
   title: 'Audiophile',
-  prose: 'Something about tunes goes here',
-  buttonText: 'Learn more',
+  prose: 'Bedroom DJ, progressive trance aficionado, floorstander fanatic',
+  buttonText: 'Hear some of his old school mixes',
   buttonLink: '/'
 };
 
