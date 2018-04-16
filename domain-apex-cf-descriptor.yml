@@ -102,6 +102,10 @@ Resources:
           S3OriginConfig:
             OriginAccessIdentity:
               Fn::Join: [ '', [ 'origin-access-identity/cloudfront/', !Ref S3OriginAccessIdentity ] ]
+        CustomErrorResponses:
+        - ErrorCode: 404
+          ResponseCode: 200
+          ResponsePagePath: /index.html
         DefaultCacheBehavior:
           AllowedMethods:
           - GET
