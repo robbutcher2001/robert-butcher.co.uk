@@ -3,7 +3,7 @@ const oupContent = {
   prose: 'Some stuff about working at OUP',
   imageUrl: '/content/images/temp.jpg',
   buttonText: 'Learn more',
-  buttonLink: 'oup'
+  buttonLink: '/project-pages/oup'
 };
 
 module.exports = {
