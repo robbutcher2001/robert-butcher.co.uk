@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../components/header';
 import { headerContent } from '../../content/projects/header';
 
-import Banner from '../../components/banner';
-import { bannerContent } from '../../content/projects/banner';
+import Articles from './articles';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -18,14 +17,7 @@ export default class Homepage extends Component {
           topButtonText={headerContent.topButtonText}
           topButtonLink={headerContent.topButtonLink}
         />
-        <Banner
-          title={bannerContent.title}
-          avatarUrl={bannerContent.avatarUrl}
-          avatarLink={bannerContent.avatarLink}
-          interestA={bannerContent.interestA}
-          interestB={bannerContent.interestB}
-          interestC={bannerContent.interestC}
-        />
+        <Articles />
         <Footer
           title={footerContent.title}
           prose={footerContent.prose}
