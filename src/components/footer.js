@@ -38,7 +38,7 @@ const Footer = ({
           <li className='fa-music'><a href={musicUrl}>{musicUrl}</a></li>
         </ul>
         <ul className='copyright'>
-          <li>&copy; Rob Butcher</li><li>Design: <a href='http://html5up.net'>HTML5 UP</a></li>
+          <li>&copy; Rob Butcher</li><li>Design: <a href='https://html5up.net'>HTML5 UP</a></li>
         </ul>
       </div>
     </section>

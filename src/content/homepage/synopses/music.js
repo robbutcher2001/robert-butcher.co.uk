@@ -5,7 +5,7 @@ const musicContent = {
   title: 'Audiophile',
   prose: 'Bedroom DJ, progressive trance aficionado, floorstander fanatic',
   buttonText: 'Hear some of his old school mixes',
-  buttonLink: '/'
+  buttonLink: '/bangers'
 };
 
 module.exports = {

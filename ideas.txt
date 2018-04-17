@@ -14,6 +14,7 @@ Ideas:
 	- Short 30 second video made on iMovie to show me editing dev branch to add new 'project article*', pipeline, test URL, merge on Github, pipeline, prod URL
 - A link to my Github for HomeAutomation - maybe even short video of lights changing? Timelapse?
 - DJ section with music loves and link to a few mixes and some of my fav mixes by other artists
+ - 'HEAR SOME OF HIS OLD SCHOOL MIXES' link on Homepage should list all artists I like, some of their mixes and not just my mixes
  - Leads on to link to private project I've worked on, React music app
 
 Make it a fun site with fun language - a place people want to read on.
