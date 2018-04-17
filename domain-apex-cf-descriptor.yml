@@ -118,6 +118,7 @@ Resources:
             Cookies:
               Forward: all
           ViewerProtocolPolicy: redirect-to-https
+          Compress: true
   DomainApexDistributionDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:

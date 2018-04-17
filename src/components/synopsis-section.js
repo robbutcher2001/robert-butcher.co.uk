@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const getClassName = (direction, imageUrl, style) => {
   let className = 'wrapper ';
@@ -8,7 +9,6 @@ const getClassName = (direction, imageUrl, style) => {
   return className.concat(style);
 };
 
-//TODO: change <a> to Router Link's
 const SynopsisSection = ({
   id,
   direction,
@@ -22,11 +22,13 @@ const SynopsisSection = ({
   return (
     <section id={id} className={getClassName(direction, imageUrl, style)}>
       <div className='inner'>
-        <a href='/' className='image'><img src={imageUrl} alt='Section image' /></a>
+        <Link to='/' className='image'>
+          <img src={imageUrl} alt='Section image' />
+        </Link>
         <div className='content'>
           <h2 className='major'>{title}</h2>
           <p>{prose}</p>
-          <a href={buttonLink} className='special'>{buttonText}</a>
+          <Link to={buttonLink} className='special'>{buttonText}</Link>
         </div>
       </div>
     </section>

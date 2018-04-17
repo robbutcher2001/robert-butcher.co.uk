@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-//TODO: change <a> to Router Link's
 const Banner = ({
   title,
   avatarUrl,
@@ -12,7 +12,9 @@ const Banner = ({
   return (
     <section id='banner'>
       <div className='inner'>
-        <a href={avatarLink} className='image avatar'><img src={avatarUrl} alt='Avatar image' /></a>
+        <Link to={avatarLink} className='image avatar'>
+          <img src={avatarUrl} alt='Avatar image' />
+        </Link>
         <h2>{title}</h2>
         <p>{interestA} <mark>|</mark> {interestB} <mark>|</mark> {interestC}</p>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-//TODO: change <a> to Router Link's
 const Footer = ({
   title,
   prose,

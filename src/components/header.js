@@ -1,12 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-//TODO: change <a> to Router Link's
 const Header = ({ title, topButtonText, topButtonLink }) => {
   return (
     <header id='header' className='alt'>
-      <h1><a href='/'>{title}</a></h1>
+      <h1><Link to='/'>{title}</Link></h1>
       <nav>
-        <a href={topButtonLink}>{topButtonText}</a>
+        <Link to={topButtonLink}>{topButtonText}</Link>
       </nav>
     </header>
   );
