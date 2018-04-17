@@ -11,9 +11,9 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path='/project-pages/oup' component={OUP} />
-          <Route path='/projects' component={Projects} />
-          <Route path='/' component={Homepage} />
+          <Route exact path='/project-pages/oup' component={OUP} />
+          <Route exact path='/projects' component={Projects} />
+          <Route exact path='/' component={Homepage} />
           <Route component={NoMatch} />
         </Switch>
       </BrowserRouter>
