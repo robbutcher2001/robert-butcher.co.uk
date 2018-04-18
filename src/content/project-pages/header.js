@@ -1,7 +1,7 @@
 const headerContent = {
   title: 'Rob Butcher',
-  topButtonText: 'Homepage >',
-  topButtonLink: '/'
+  topButtonText: 'Projects >',
+  topButtonLink: '/projects'
 };
 
 module.exports = {
