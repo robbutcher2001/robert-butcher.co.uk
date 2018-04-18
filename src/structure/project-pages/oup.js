@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/header';
-import { headerContent } from '../../content/projects/header';
+import { headerContent } from '../../content/project-pages/header';
 
-import BannerNoImage from '../../components/banner-noimage';
+import Banner from '../../components/banner';
+import { oupContent } from '../../content/project-pages/oup';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -17,17 +18,19 @@ export default class Homepage extends Component {
           topButtonText={headerContent.topButtonText}
           topButtonLink={headerContent.topButtonLink}
         />
+        <Banner
+          title={oupContent.title}
+          logoUrl={oupContent.logoUrl}
+          logoLink={oupContent.logoLink}
+          prose={oupContent.role}
+        />
         <section id='wrapper'>
-          <BannerNoImage
-            title='oup'
-            prose='Stuff about the OUP project'
-          />
           <div className='wrapper'>
             <div className='inner'>
-              <h3 className='major'>something about OUP</h3>
-              <p>proseA</p>
-              <p>proseB</p>
-              <code>code here</code>
+              <h3 className='major'>{oupContent.dates}</h3>
+              <p>{oupContent.proseA}</p>
+              <p>{oupContent.proseB}</p>
+              <pre><code>{oupContent.code}</code></pre>
             </div>
           </div>
         </section>

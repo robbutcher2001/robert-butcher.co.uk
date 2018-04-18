@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../components/header';
 import { headerContent } from '../../content/homepage/header';
 
-import Banner from '../../components/banner';
+import BannerHomepage from '../../components/banner-homepage';
 import { bannerContent } from '../../content/homepage/banner';
 
 import Synopses from './synopses';
@@ -20,7 +20,7 @@ export default class Homepage extends Component {
           topButtonText={headerContent.topButtonText}
           topButtonLink={headerContent.topButtonLink}
         />
-        <Banner
+        <BannerHomepage
           title={bannerContent.title}
           avatarUrl={bannerContent.avatarUrl}
           avatarLink={bannerContent.avatarLink}

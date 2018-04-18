@@ -19,11 +19,11 @@ const Footer = ({
         <form method='post' action={postUrl}>
           <div className='field'>
             <label htmlFor={fieldA.toLowerCase()}>{fieldA}</label>
-            <input type='text' name={fieldA.toLowerCase()} id={fieldA.toLowerCase()} />
+            <input type='text' autoComplete={fieldA.toLowerCase()} name={fieldA.toLowerCase()} id={fieldA.toLowerCase()} />
           </div>
           <div className='field'>
             <label htmlFor={fieldB.toLowerCase()}>{fieldB}</label>
-            <input type='email' name={fieldB.toLowerCase()} id={fieldB.toLowerCase()} />
+            <input type='email' autoComplete={fieldB.toLowerCase()} name={fieldB.toLowerCase()} id={fieldB.toLowerCase()} />
           </div>
           <div className='field'>
             <label htmlFor={fieldC.toLowerCase()}>{fieldC}</label>
