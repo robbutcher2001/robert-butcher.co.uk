@@ -1,6 +1,6 @@
 const footerContent = {
   title: 'Give Rob a shout',
-  prose: 'If there\'s anything you want to ask me about, I\'m all ears..',
+  prose: 'If there\'s anything you want to ask Rob about, he\'s all ears (trust me)..',
   postUrl: '/cannot-post-yet-sozza!',
   fieldA: 'Name',
   fieldB: 'Email',

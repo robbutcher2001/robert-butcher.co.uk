@@ -4,7 +4,7 @@ import SynopsisAngle from '../../components/synopsis-angle';
 import { devopsContent } from '../../content/homepage/synopses/devops';
 import { engineeringContent } from '../../content/homepage/synopses/engineering';
 import { musicContent } from '../../content/homepage/synopses/music';
-import { homeautomationContent } from '../../content/homepage/synopses/homeautomation';
+import { homeautomationContent } from '../../content/homepage/synopses/home-automation';
 
 export default class Synopses extends Component {
   render() {

@@ -1,11 +1,11 @@
 const musicContent = {
   direction: 'right',
-  imageUrl: '/content/images/3.jpg',
+  imageUrl: '/content/images/anjuna.jpg',
   style: 'style3',
   title: 'Audiophile',
   prose: 'Bedroom DJ, progressive trance aficionado, floorstander fanatic',
   buttonText: 'Hear some of his old school mixes',
-  buttonLink: '/bangers'
+  buttonLink: '/projects/tunage'
 };
 
 module.exports = {

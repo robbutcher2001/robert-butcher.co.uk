@@ -1,9 +1,9 @@
 const thisSiteContent = {
   title: 'This Site!',
   prose: 'Some stuff about doing this site, reasons behind it etc.',
-  imageUrl: '/content/images/temp.jpg',
+  imageUrl: '/content/images/this-site.png',
   buttonText: 'Learn more (this can link to same timelapse page / vid the homepage does)',
-  buttonLink: 'this-site'
+  buttonLink: '/projects/this-site'
 };
 
 module.exports = {

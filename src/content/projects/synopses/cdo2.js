@@ -3,7 +3,7 @@ const cdo2Content = {
   prose: 'some stuff',
   imageUrl: '/content/images/cdo2.png',
   buttonText: 'Learn more',
-  buttonLink: 'cdo2'
+  buttonLink: '/projects/cdo2'
 };
 
 module.exports = {
