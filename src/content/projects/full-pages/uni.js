@@ -1,6 +1,6 @@
-const oupContent = {
+const uniContent = {
   title: 'Oxford University Press',
-  logoUrl: '/content/images/oup.jpg',
+  logoUrl: '/content/images/uni.jpg',
   logoLink: '/',
   role: 'Lead DevOps Engineer',
   dates: 'April 2017 - April 2018',
@@ -10,5 +10,5 @@ const oupContent = {
 };
 
 module.exports = {
-  oupContent
+  uniContent
 };

@@ -6,9 +6,9 @@ import { bannerContent } from '../../content/projects/banner';
 import SynopsisSquare from '../../components/synopsis-square';
 import { overviewContent } from '../../content/projects/overview';
 
-import { oupContent } from '../../content/projects/synopses/oup';
-import { threeContent } from '../../content/projects/synopses/three';
-import { nreContent } from '../../content/projects/synopses/nre';
+import { uniContent } from '../../content/projects/synopses/uni';
+import { telcoContent } from '../../content/projects/synopses/telco';
+import { railContent } from '../../content/projects/synopses/rail';
 import { cdo2Content } from '../../content/projects/synopses/cdo2';
 
 import { musicAppContent } from '../../content/projects/synopses/musicApp';
@@ -30,25 +30,25 @@ export default class Synopses extends Component {
             <p>{overviewContent.proseB}</p>
             <section className='features'>
               <SynopsisSquare
-                title={oupContent.title}
-                prose={oupContent.prose}
-                imageUrl={oupContent.imageUrl}
-                buttonText={oupContent.buttonText}
-                buttonLink={oupContent.buttonLink}
+                title={uniContent.title}
+                prose={uniContent.prose}
+                imageUrl={uniContent.imageUrl}
+                buttonText={uniContent.buttonText}
+                buttonLink={uniContent.buttonLink}
               />
               <SynopsisSquare
-                title={threeContent.title}
-                prose={threeContent.prose}
-                imageUrl={threeContent.imageUrl}
-                buttonText={threeContent.buttonText}
-                buttonLink={threeContent.buttonLink}
+                title={telcoContent.title}
+                prose={telcoContent.prose}
+                imageUrl={telcoContent.imageUrl}
+                buttonText={telcoContent.buttonText}
+                buttonLink={telcoContent.buttonLink}
               />
               <SynopsisSquare
-                title={nreContent.title}
-                prose={nreContent.prose}
-                imageUrl={nreContent.imageUrl}
-                buttonText={nreContent.buttonText}
-                buttonLink={nreContent.buttonLink}
+                title={railContent.title}
+                prose={railContent.prose}
+                imageUrl={railContent.imageUrl}
+                buttonText={railContent.buttonText}
+                buttonLink={railContent.buttonLink}
               />
               <SynopsisSquare
                 title={cdo2Content.title}
