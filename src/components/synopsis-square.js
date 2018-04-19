@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ArticleSection = ({
+const SynopsisSquare = ({
   title,
   prose,
   imageUrl,
@@ -11,7 +11,7 @@ const ArticleSection = ({
   return (
     <article>
       <Link to='/' className='image'>
-        <img src={imageUrl} alt='Article image' />
+        <img src={imageUrl} alt='Synopsis image' />
       </Link>
       <h3 className='major'>{title}</h3>
       <p>{prose}</p>
@@ -20,4 +20,4 @@ const ArticleSection = ({
   );
 }
 
-export default ArticleSection;
+export default SynopsisSquare;

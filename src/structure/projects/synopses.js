@@ -3,19 +3,19 @@ import React, { Component } from 'react';
 import BannerNoImage from '../../components/banner-noimage';
 import { bannerContent } from '../../content/projects/banner';
 
-import ArticleSection from '../../components/article-section';
+import SynopsisSquare from '../../components/synopsis-square';
 import { overviewContent } from '../../content/projects/overview';
 
-import { oupContent } from '../../content/projects/articles/oup';
-import { threeContent } from '../../content/projects/articles/three';
-import { nreContent } from '../../content/projects/articles/nre';
-import { cdo2Content } from '../../content/projects/articles/cdo2';
+import { oupContent } from '../../content/projects/synopses/oup';
+import { threeContent } from '../../content/projects/synopses/three';
+import { nreContent } from '../../content/projects/synopses/nre';
+import { cdo2Content } from '../../content/projects/synopses/cdo2';
 
-import { musicAppContent } from '../../content/projects/articles/musicApp';
-import { homeAutomationContent } from '../../content/projects/articles/homeAutomation';
-import { thisSiteContent } from '../../content/projects/articles/thisSite';
+import { musicAppContent } from '../../content/projects/synopses/musicApp';
+import { homeAutomationContent } from '../../content/projects/synopses/homeAutomation';
+import { thisSiteContent } from '../../content/projects/synopses/thisSite';
 
-export default class Articles extends Component {
+export default class Synopses extends Component {
   render() {
     return (
       <section id='wrapper'>
@@ -29,28 +29,28 @@ export default class Articles extends Component {
             <p>{overviewContent.proseA}</p>
             <p>{overviewContent.proseB}</p>
             <section className='features'>
-              <ArticleSection
+              <SynopsisSquare
                 title={oupContent.title}
                 prose={oupContent.prose}
                 imageUrl={oupContent.imageUrl}
                 buttonText={oupContent.buttonText}
                 buttonLink={oupContent.buttonLink}
               />
-              <ArticleSection
+              <SynopsisSquare
                 title={threeContent.title}
                 prose={threeContent.prose}
                 imageUrl={threeContent.imageUrl}
                 buttonText={threeContent.buttonText}
                 buttonLink={threeContent.buttonLink}
               />
-              <ArticleSection
+              <SynopsisSquare
                 title={nreContent.title}
                 prose={nreContent.prose}
                 imageUrl={nreContent.imageUrl}
                 buttonText={nreContent.buttonText}
                 buttonLink={nreContent.buttonLink}
               />
-              <ArticleSection
+              <SynopsisSquare
                 title={cdo2Content.title}
                 prose={cdo2Content.prose}
                 imageUrl={cdo2Content.imageUrl}
@@ -62,21 +62,21 @@ export default class Articles extends Component {
             <p>{overviewContent.proseA}</p>
             <p>{overviewContent.proseB}</p>
             <section className='features'>
-              <ArticleSection
+              <SynopsisSquare
                 title={musicAppContent.title}
                 prose={musicAppContent.prose}
                 imageUrl={musicAppContent.imageUrl}
                 buttonText={musicAppContent.buttonText}
                 buttonLink={musicAppContent.buttonLink}
               />
-              <ArticleSection
+              <SynopsisSquare
                 title={homeAutomationContent.title}
                 prose={homeAutomationContent.prose}
                 imageUrl={homeAutomationContent.imageUrl}
                 buttonText={homeAutomationContent.buttonText}
                 buttonLink={homeAutomationContent.buttonLink}
               />
-              <ArticleSection
+              <SynopsisSquare
                 title={thisSiteContent.title}
                 prose={thisSiteContent.prose}
                 imageUrl={thisSiteContent.imageUrl}

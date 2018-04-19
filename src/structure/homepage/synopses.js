@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SynopsisSection from '../../components/synopsis-section';
+import SynopsisAngle from '../../components/synopsis-angle';
 import { devopsContent } from '../../content/homepage/synopses/devops';
 import { engineeringContent } from '../../content/homepage/synopses/engineering';
 import { musicContent } from '../../content/homepage/synopses/music';
@@ -10,7 +10,7 @@ export default class Synopses extends Component {
   render() {
     return (
       <div id='wrapper'>
-        <SynopsisSection
+        <SynopsisAngle
           id='one'
           direction={engineeringContent.direction}
           imageUrl={engineeringContent.imageUrl}
@@ -20,7 +20,7 @@ export default class Synopses extends Component {
           buttonText={engineeringContent.buttonText}
           buttonLink={engineeringContent.buttonLink}
         />
-        <SynopsisSection
+        <SynopsisAngle
           id='two'
           direction={devopsContent.direction}
           imageUrl={devopsContent.imageUrl}
@@ -30,7 +30,7 @@ export default class Synopses extends Component {
           buttonText={devopsContent.buttonText}
           buttonLink={devopsContent.buttonLink}
         />
-        <SynopsisSection
+        <SynopsisAngle
           id='three'
           direction={musicContent.direction}
           imageUrl={musicContent.imageUrl}
@@ -40,7 +40,7 @@ export default class Synopses extends Component {
           buttonText={musicContent.buttonText}
           buttonLink={musicContent.buttonLink}
         />
-        <SynopsisSection
+        <SynopsisAngle
           id='four'
           direction={homeautomationContent.direction}
           imageUrl={homeautomationContent.imageUrl}

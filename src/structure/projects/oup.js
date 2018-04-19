@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/header';
-import { headerContent } from '../../content/project-pages/header';
+import { headerContent } from '../../content/projects/full-pages/header';
 
 import Banner from '../../components/banner';
-import { oupContent } from '../../content/project-pages/oup';
+import { oupContent } from '../../content/projects/full-pages/oup';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
 
-export default class Homepage extends Component {
+export default class OUP extends Component {
   render() {
     return (
       <div id='page-wrapper'>

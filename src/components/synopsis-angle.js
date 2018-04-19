@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const getClassName = (direction, imageUrl, style) => {
+const renderClassName = (direction, imageUrl, style) => {
   let className = 'wrapper ';
 
   className = className.concat(direction === 'left' ? 'alt ' : '');
@@ -9,7 +9,7 @@ const getClassName = (direction, imageUrl, style) => {
   return className.concat(style);
 };
 
-const SynopsisSection = ({
+const SynopsisAngle = ({
   id,
   direction,
   imageUrl,
@@ -20,7 +20,7 @@ const SynopsisSection = ({
   buttonLink
 }) => {
   return (
-    <section id={id} className={getClassName(direction, imageUrl, style)}>
+    <section id={id} className={renderClassName(direction, imageUrl, style)}>
       <div className='inner'>
         <Link to='/' className='image'>
           <img src={imageUrl} alt='Section image' />
@@ -35,4 +35,4 @@ const SynopsisSection = ({
   );
 }
 
-export default SynopsisSection;
+export default SynopsisAngle;

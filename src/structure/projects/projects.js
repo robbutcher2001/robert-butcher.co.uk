@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import Header from '../../components/header';
 import { headerContent } from '../../content/projects/header';
 
-import Articles from './articles';
+import Synopses from './synopses';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
 
-export default class Homepage extends Component {
+export default class Projects extends Component {
   render() {
     return (
       <div id='page-wrapper'>
@@ -17,7 +17,7 @@ export default class Homepage extends Component {
           topButtonText={headerContent.topButtonText}
           topButtonLink={headerContent.topButtonLink}
         />
-        <Articles />
+        <Synopses />
         <Footer
           title={footerContent.title}
           prose={footerContent.prose}
