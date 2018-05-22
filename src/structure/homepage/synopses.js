@@ -14,6 +14,7 @@ export default class Synopses extends Component {
           id='one'
           direction={engineeringContent.direction}
           imageUrl={engineeringContent.imageUrl}
+          imageLink={engineeringContent.imageLink}
           style={engineeringContent.style}
           title={engineeringContent.title}
           prose={engineeringContent.prose}
@@ -24,6 +25,7 @@ export default class Synopses extends Component {
           id='two'
           direction={devopsContent.direction}
           imageUrl={devopsContent.imageUrl}
+          imageLink={devopsContent.imageLink}
           style={devopsContent.style}
           title={devopsContent.title}
           prose={devopsContent.prose}
@@ -34,6 +36,7 @@ export default class Synopses extends Component {
           id='three'
           direction={musicContent.direction}
           imageUrl={musicContent.imageUrl}
+          imageLink={musicContent.imageLink}
           style={musicContent.style}
           title={musicContent.title}
           prose={musicContent.prose}
@@ -44,6 +47,7 @@ export default class Synopses extends Component {
           id='four'
           direction={homeautomationContent.direction}
           imageUrl={homeautomationContent.imageUrl}
+          imageLink={homeautomationContent.imageLink}
           style={homeautomationContent.style}
           title={homeautomationContent.title}
           prose={homeautomationContent.prose}

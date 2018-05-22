@@ -5,12 +5,13 @@ const SynopsisSquare = ({
   title,
   prose,
   imageUrl,
+  imageLink,
   buttonText,
   buttonLink
 }) => {
   return (
     <article>
-      <Link to='/' className='image'>
+      <Link to={imageLink} className='image'>
         <img src={imageUrl} alt='Synopsis image' />
       </Link>
       <h3 className='major'>{title}</h3>

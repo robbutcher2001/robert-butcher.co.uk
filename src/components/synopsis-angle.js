@@ -13,6 +13,7 @@ const SynopsisAngle = ({
   id,
   direction,
   imageUrl,
+  imageLink,
   style,
   title,
   prose,
@@ -22,7 +23,7 @@ const SynopsisAngle = ({
   return (
     <section id={id} className={renderClassName(direction, imageUrl, style)}>
       <div className='inner'>
-        <Link to='/' className='image'>
+        <Link to={imageLink} className='image'>
           <img src={imageUrl} alt='Section image' />
         </Link>
         <div className='content'>

@@ -34,11 +34,11 @@ const Footer = ({
           </ul>
         </form>
         <ul className='contact'>
-          <li className='fa-github'><a href={gitHubUrl}>{gitHubUrl}</a></li>
-          <li className='fa-music'><a href={musicUrl}>{musicUrl}</a></li>
+          <li className='fa-github'><a href={gitHubUrl} target='_blank'>{gitHubUrl}</a></li>
+          <li className='fa-music'><a href={musicUrl} target='_blank'>{musicUrl}</a></li>
         </ul>
         <ul className='copyright'>
-          <li>&copy; Rob Butcher</li><li>Design: <a href='https://html5up.net'>HTML5 UP</a></li>
+          <li>&copy; Rob Butcher</li><li>Design: <a href='https://html5up.net' target='_blank'>HTML5 UP</a> but ported to React by Rob.</li>
         </ul>
       </div>
     </section>

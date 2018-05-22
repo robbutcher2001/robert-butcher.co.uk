@@ -34,6 +34,7 @@ export default class Synopses extends Component {
                 title={uniContent.title}
                 prose={uniContent.prose}
                 imageUrl={uniContent.imageUrl}
+                imageLink={uniContent.imageLink}
                 buttonText={uniContent.buttonText}
                 buttonLink={uniContent.buttonLink}
               />
@@ -41,6 +42,7 @@ export default class Synopses extends Component {
                 title={telcoContent.title}
                 prose={telcoContent.prose}
                 imageUrl={telcoContent.imageUrl}
+                imageLink={telcoContent.imageLink}
                 buttonText={telcoContent.buttonText}
                 buttonLink={telcoContent.buttonLink}
               />
@@ -48,6 +50,7 @@ export default class Synopses extends Component {
                 title={railContent.title}
                 prose={railContent.prose}
                 imageUrl={railContent.imageUrl}
+                imageLink={railContent.imageLink}
                 buttonText={railContent.buttonText}
                 buttonLink={railContent.buttonLink}
               />
@@ -55,6 +58,7 @@ export default class Synopses extends Component {
                 title={cdo2Content.title}
                 prose={cdo2Content.prose}
                 imageUrl={cdo2Content.imageUrl}
+                imageLink={cdo2Content.imageLink}
                 buttonText={cdo2Content.buttonText}
                 buttonLink={cdo2Content.buttonLink}
               />
@@ -68,6 +72,7 @@ export default class Synopses extends Component {
                 title={homeAutomationContent.title}
                 prose={homeAutomationContent.prose}
                 imageUrl={homeAutomationContent.imageUrl}
+                imageLink={homeAutomationContent.imageLink}
                 buttonText={homeAutomationContent.buttonText}
                 buttonLink={homeAutomationContent.buttonLink}
               />
@@ -75,6 +80,7 @@ export default class Synopses extends Component {
                 title={musicAppContent.title}
                 prose={musicAppContent.prose}
                 imageUrl={musicAppContent.imageUrl}
+                imageLink={musicAppContent.imageLink}
                 buttonText={musicAppContent.buttonText}
                 buttonLink={musicAppContent.buttonLink}
               />
@@ -82,6 +88,7 @@ export default class Synopses extends Component {
                 title={thisSiteContent.title}
                 prose={thisSiteContent.prose}
                 imageUrl={thisSiteContent.imageUrl}
+                imageLink={thisSiteContent.imageLink}
                 buttonText={thisSiteContent.buttonText}
                 buttonLink={thisSiteContent.buttonLink}
               />
