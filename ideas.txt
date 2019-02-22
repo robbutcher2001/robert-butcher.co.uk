@@ -17,4 +17,4 @@ Ideas:
  - 'HEAR SOME OF HIS OLD SCHOOL MIXES' link on Homepage should list all artists I like, some of their mixes and not just my mixes
  - Leads on to link to private project I've worked on, React music app
 
-Make it a fun site with fun language - a place people want to read on. Text
+Make it a fun site with fun language - a place people want to read on.
