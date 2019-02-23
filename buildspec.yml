@@ -12,7 +12,6 @@ phases:
       - aws s3 cp domain-apex-cf-descriptor.yml s3://${LambdaSourceBucket}
       - npm install
       - npm run build
-      - cp -r src/boilerplate-assets/ dist/.
       - mkdir dist/content
       - cp -r src/content/images/ dist/content/.
 artifacts:
