@@ -9,6 +9,8 @@ import Projects from './projects/projects';
 import Uni from './projects/uni';
 import PlaceHolder from './projects/PLACEHOLDER';
 
+import styles from '../boilerplate-assets/sass/main.scss';
+
 export default class App extends Component {
   render() {
     return (

@@ -11,10 +11,14 @@ import Synopses from './synopses';
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
 
+import styles from '../rib.scss';
+
+console.log(styles)
+
 export default class Homepage extends Component {
   render() {
     return (
-      <div id='page-wrapper'>
+      <div id='page-wrapper' className={styles.thing} >
         <Header
           title={headerContent.title}
           topButtonText={headerContent.topButtonText}
