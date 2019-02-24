@@ -9,7 +9,7 @@ const renderClassName = (direction, imageUrl, style) => {
   return className.concat(style);
 };
 
-const SynopsisAngle = ({
+export default ({
   id,
   direction,
   imageUrl,
@@ -19,21 +19,20 @@ const SynopsisAngle = ({
   prose,
   buttonText,
   buttonLink
-}) => {
-  return (
-    <section id={id} className={renderClassName(direction, imageUrl, style)}>
-      <div className='inner'>
-        <Link to={imageLink} className='image'>
-          <img src={imageUrl} alt='Section image' />
+}) => (
+  <section id={id} className={renderClassName(direction, imageUrl, style)}>
+    <div className='inner'>
+      <Link to={imageLink} className='image'>
+        <img src={imageUrl} alt='Section image' />
+      </Link>
+      <div className='content'>
+        <h2 className='major'>{title}</h2>
+        <p>{prose}</p>
+        <Link to={buttonLink} className='special'>
+          <i className='fas fa-angle-right'></i>
+          {buttonText}
         </Link>
-        <div className='content'>
-          <h2 className='major'>{title}</h2>
-          <p>{prose}</p>
-          <Link to={buttonLink} className='special'>{buttonText}</Link>
-        </div>
       </div>
-    </section>
-  );
-}
-
-export default SynopsisAngle;
+    </div>
+  </section>
+);

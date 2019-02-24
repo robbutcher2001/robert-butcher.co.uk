@@ -46,7 +46,7 @@
 		}
 
 		&.special:not(.button) {
-			@include icon;
+			// @include icon; //Rob removed ref to mixin as it clashed with newly loaded FontAwesome
 			border-bottom: 0;
 			display: block;
 			font-family: _font(family-heading);
@@ -55,22 +55,6 @@
 			letter-spacing: _font(kern-heading);
 			margin: 0 0 _size(element-margin) 0;
 			text-transform: uppercase;
-
-			&:before {
-				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-				border-radius: 100%;
-				border: solid 2px _palette(border);
-				content: '\f105';
-				display: inline-block;
-				font-size: 1.25em;
-				height: 2em;
-				line-height: 1.65em;
-				margin-right: 0.85em;
-				text-align: center;
-				text-indent: 0.15em;
-				vertical-align: middle;
-				width: 2em;
-			}
 
 			&:hover {
 				&:before {
@@ -83,6 +67,20 @@
 					background-color: _palette(border2-bg);
 				}
 			}
+		}
+
+		i:before {
+			border-radius: 100%;
+			border: solid 2px _palette(border);
+			display: inline-block;
+			font-size: 1.25em;
+			height: 2em;
+			line-height: 1.65em;
+			margin-right: 0.85em;
+			text-align: center;
+			text-indent: 0.2em;
+			vertical-align: middle;
+			width: 2em;
 		}
 	}
 

@@ -33,6 +33,12 @@ const baseConfig = {
         'css-loader',
         'sass-loader'
       ]
+    }, {
+      test: /\.(woff2?|eot|ttf|otf|svg)$/,
+      exclude: /(node_modules)/,
+      use: {
+        loader: 'file-loader'
+      }
     }]
   },
   resolve: {

@@ -7,7 +7,7 @@
 /* Icon */
 
 	.icon {
-		@include icon;
+		// @include icon; //Rob removed ref to mixin as it clashed with newly loaded FontAwesome
 		border-bottom: none;
 		position: relative;
 

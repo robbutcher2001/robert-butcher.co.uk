@@ -17,6 +17,10 @@
 			display: block;
 		}
 
+		&.avatar {
+    	margin-bottom: 20px;
+		}
+
 		&.left,
 		&.right {
 			max-width: 40%;

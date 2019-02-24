@@ -67,7 +67,7 @@
 	}
 
 	.select-wrapper {
-		@include icon;
+		// @include icon; //Rob removed ref to mixin as it clashed with newly loaded FontAwesome
 		display: block;
 		position: relative;
 
@@ -119,7 +119,7 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
+			// @include icon; //Rob removed ref to mixin as it clashed with newly loaded FontAwesome
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
