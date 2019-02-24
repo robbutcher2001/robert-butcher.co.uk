@@ -18,3 +18,8 @@ Ideas:
  - Leads on to link to private project I've worked on, React music app
 
 Make it a fun site with fun language - a place people want to read on.
+
+
+TODOs:
+- Removing the animation on the title and 3 x interests (homepage) but maybe could redo these and ease-in interest A first, then B etc.
+- Dark grey bar at top does not persist like it does in the design (probably due to lack of JS now)
