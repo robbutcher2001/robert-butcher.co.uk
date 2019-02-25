@@ -1,6 +1,6 @@
 const railContent = {
   title: 'UK Train Enquiries',
-  prose: 'Some stuff about working at rail',
+  prose: 'Production Support Engineer and Java EE Developer for just under a year.',
   imageUrl: '/content/images/rail.jpg',
   imageLink: '/projects/rail',
   buttonText: 'Learn more',

@@ -26,6 +26,10 @@ export default () => (
       <div className='wrapper'>
         <div className='inner'>
           <h3 className='major'>{cdo2Content.dates}</h3>
+          {cdo2Content.prose.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
           <p>{cdo2Content.proseA}</p>
           <p>{cdo2Content.proseB}</p>
           <p>{cdo2Content.proseC}</p>
