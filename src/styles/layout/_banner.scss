@@ -90,6 +90,10 @@
 									center;
 
 		 	margin-bottom: (_size(wrapper-edges, large) * -1);
+
+			.inner a > img {
+				width: 80%;
+			}
 		}
 
 		@include breakpoint(medium) {
@@ -99,6 +103,10 @@
 
 			.inner {
 				width: 100%;
+				
+				a > img {
+					width: 70%;
+				}
 			}
 		}
 
@@ -113,6 +121,10 @@
 				.icon {
 					font-size: 1.5em;
 				}
+			}
+
+			.inner a > img {
+				width: 60%;
 			}
 
 			h2 {
