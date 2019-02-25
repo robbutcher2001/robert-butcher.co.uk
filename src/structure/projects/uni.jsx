@@ -26,8 +26,10 @@ export default () => (
       <div className='wrapper'>
         <div className='inner'>
           <h3 className='major'>{uniContent.dates}</h3>
-          <p>{uniContent.proseA}</p>
-          <p>{uniContent.proseB}</p>
+          {uniContent.prose.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
           <pre><code>{uniContent.code}</code></pre>
         </div>
       </div>
