@@ -1,7 +1,7 @@
 const cdo2Content = {
   title: 'Financial Risk and Valuation Software Provider',
   logoUrl: '/content/images/cdo2.png',
-  logoLink: '/',
+  logoLink: '/projects/cdo2',
   role: 'Java EE Developer',
   dates: 'June 2009 - September 2010',
   prose: [

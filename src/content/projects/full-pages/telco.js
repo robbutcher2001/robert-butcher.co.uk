@@ -1,7 +1,7 @@
 const telcoContent = {
   title: 'UK Telecoms Network',
   logoUrl: '/content/images/telco.jpg',
-  logoLink: '/',
+  logoLink: '/projects/telco',
   principalRole: 'Account Architect',
   roleA: {
     title: 'Account Architect',
@@ -19,7 +19,7 @@ const telcoContent = {
     dates: 'Early 2012 - July 2014',
     prose: [
       'Rob started work on this account back in 2012 as a backend Java developer and supported the transition of the account to another UK location.',
-      'Rob\'s most notable piece of work was a three months project consolidating ten or eleven fragmented Production API feeds organically grown over time into a single, hot-reloadable Java backend with a consistent and documented schema. Something the client needed for years.',
+      'Rob\'s most notable piece of work was a three month project consolidating ten or eleven fragmented Production API feeds organically grown over time into a single, hot-reloadable Java backend with a consistent and documented schema. Something the client needed for years.',
       'During his time as a Dev, he built up an invaluable relationship with the client, with weekly visits to their site and ultimately complete integration into their Scrum team. The client even bought him an Amazon Alexa as a parting gift! Tasty.'
     ]
   }

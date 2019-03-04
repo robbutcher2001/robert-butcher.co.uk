@@ -8,6 +8,7 @@ import Homepage from './homepage';
 import Projects from './projects';
 import Uni from './projects/uni';
 import Telco from './projects/telco';
+import Rail from './projects/rail';
 import CDO2 from './projects/cdo2';
 import PlaceHolder from './projects/PLACEHOLDER';
 
@@ -19,7 +20,7 @@ export default () => (
       <Switch>
         <Route exact path='/projects/uni' component={Uni} />
         <Route exact path='/projects/telco' component={Telco} />
-        <Route exact path='/projects/rail' component={PlaceHolder} />
+        <Route exact path='/projects/rail' component={Rail} />
         <Route exact path='/projects/cdo2' component={CDO2} />
         <Route exact path='/projects/automated-flat' component={PlaceHolder} />
         <Route exact path='/projects/tunage' component={PlaceHolder} />
