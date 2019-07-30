@@ -1,7 +1,7 @@
-const uniContent = {
+module.exports = {
   title: 'A Top English University',
   logoUrl: '/content/images/uni.jpg',
-  logoLink: '/',
+  logoLink: '/projects/uni',
   role: 'Principal DevOps Engineer',
   dates: 'April 2017 - April 2018',
   prose: [
@@ -12,8 +12,4 @@ const uniContent = {
     ''
   ],
   code: '<VideoPlayer\n  ref="videoplayer"\n  preload={this.props.preload}\n  classes={this.props.classes}\n  videoID={this.props.videoID}\n  controls="controls"\n/>'
-};
-
-module.exports = {
-  uniContent
 };

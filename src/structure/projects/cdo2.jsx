@@ -9,6 +9,7 @@ import { cdo2Content } from '../../content/projects/full-pages/cdo2';
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
 
+//TODO: the structure of these pages repeats (for now) so maybe use composition to render this basic structure for all project pages with a props.children rendering anything specific
 export default () => (
   <div id='page-wrapper'>
     <Header
@@ -30,11 +31,6 @@ export default () => (
               <p key={i}>{p}</p>
             ))
           }
-          <p>{cdo2Content.proseA}</p>
-          <p>{cdo2Content.proseB}</p>
-          <p>{cdo2Content.proseC}</p>
-          <p>{cdo2Content.proseD}</p>
-          <p>{cdo2Content.proseE}</p>
         </div>
       </div>
     </section>

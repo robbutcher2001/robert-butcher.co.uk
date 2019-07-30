@@ -112,6 +112,13 @@
 
 		span {
 			font-weight: _font(weight-heading);
+
+			&.minor {
+				padding-left: 1em;
+				font-style: italic;
+				font-size: 0.8em;
+				text-transform: none;
+			}
 		}
 
 		&.major {

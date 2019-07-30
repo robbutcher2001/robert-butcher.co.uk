@@ -4,7 +4,7 @@ import Header from '../../components/header';
 import { headerContent } from '../../content/projects/full-pages/header';
 
 import Banner from '../../components/banner';
-import content from '../../content/projects/full-pages/uni';
+import { telcoContent } from '../../content/projects/full-pages/telco';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -17,20 +17,35 @@ export default () => (
       topButtonLink={headerContent.topButtonLink}
     />
     <Banner
-      title={content.title}
-      logoUrl={content.logoUrl}
-      logoLink={content.logoLink}
-      prose={content.role}
+      title={telcoContent.title}
+      logoUrl={telcoContent.logoUrl}
+      logoLink={telcoContent.logoLink}
+      prose={telcoContent.principalRole}
     />
     <section id='wrapper'>
       <div className='wrapper'>
         <div className='inner'>
-          <h3 className='major'>{content.dates}</h3>
-          {content.prose.map((p, i) => (
+          <h3 className='major'>
+            {telcoContent.roleA.title}
+            <span className='minor'>
+              {telcoContent.roleA.dates}
+            </span>
+          </h3>
+          {telcoContent.roleA.prose.map((p, i) => (
               <p key={i}>{p}</p>
             ))
           }
-          <pre><code>{content.code}</code></pre>
+          <br/>
+          <h3 className='major'>
+            {telcoContent.roleB.title}
+            <span className='minor'>
+              {telcoContent.roleB.dates}
+            </span>
+          </h3>
+          {telcoContent.roleB.prose.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
         </div>
       </div>
     </section>

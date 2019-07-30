@@ -4,7 +4,7 @@ import Header from '../../components/header';
 import { headerContent } from '../../content/projects/full-pages/header';
 
 import Banner from '../../components/banner';
-import content from '../../content/projects/full-pages/uni';
+import { railContent } from '../../content/projects/full-pages/rail';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -17,20 +17,19 @@ export default () => (
       topButtonLink={headerContent.topButtonLink}
     />
     <Banner
-      title={content.title}
-      logoUrl={content.logoUrl}
-      logoLink={content.logoLink}
-      prose={content.role}
+      title={railContent.title}
+      logoUrl={railContent.logoUrl}
+      logoLink={railContent.logoLink}
+      prose={railContent.role}
     />
     <section id='wrapper'>
       <div className='wrapper'>
         <div className='inner'>
-          <h3 className='major'>{content.dates}</h3>
-          {content.prose.map((p, i) => (
+          <h3 className='major'>{railContent.dates}</h3>
+          {railContent.prose.map((p, i) => (
               <p key={i}>{p}</p>
             ))
           }
-          <pre><code>{content.code}</code></pre>
         </div>
       </div>
     </section>
