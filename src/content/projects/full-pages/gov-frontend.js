@@ -1,6 +1,6 @@
 const govFrontendContent = {
-  title: 'Government U.K.',
-  logoUrl: '/content/images/gov2.png',
+  title: 'Government',
+  logoUrl: '/content/images/gov3.jpg',
   logoLink: '/projects/gov-frontend',
   role: 'Lead Frontend Developer',
   dates: 'April 2018 - Jan 2019',

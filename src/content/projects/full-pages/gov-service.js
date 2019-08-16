@@ -1,6 +1,6 @@
 const govServiceContent = {
-  title: 'Government U.K. (Service)',
-  logoUrl: '/content/images/gov.png',
+  title: 'Government',
+  logoUrl: '/content/images/gov4.jpg',
   logoLink: '/projects/gov-service',
   role: 'Flow-Based and Stream-Orientated Programmer',
   dates: 'Jan 2019 - Present',
