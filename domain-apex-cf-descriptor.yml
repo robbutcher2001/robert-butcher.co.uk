@@ -102,6 +102,10 @@ Resources:
           S3OriginConfig:
             OriginAccessIdentity:
               Fn::Join: [ '', [ 'origin-access-identity/cloudfront/', !Ref S3OriginAccessIdentity ] ]
+        CustomErrorResponses:
+        - ErrorCode: 404
+          ResponseCode: 200
+          ResponsePagePath: /index.html
         DefaultCacheBehavior:
           AllowedMethods:
           - GET
@@ -114,6 +118,7 @@ Resources:
             Cookies:
               Forward: all
           ViewerProtocolPolicy: redirect-to-https
+          Compress: true
   DomainApexDistributionDNSRecord:
     Type: AWS::Route53::RecordSet
     Properties:

@@ -1,0 +1,32 @@
+For this site, I could use one of these bad boys (best of the bunch I reckon):
+- https://html5up.net/solid-state
+- https://html5up.net/helios
+
+Ideas:
+- Rob Butcher
+- Software Engineer
+- Audiophile
+- Home Automation Maniac (<something else?> you'll be questioned on this so make it good! DevOps Maniac?)
+
+- Can then have each project* I've worked on with: title; 5-6 words about main achievement; tech worked with; time on project
+	- maybe just the top section is high level about the Software Engineering things I've done with a 'Learn More >' or 'CV >' button going to a separate page to detail these projects in the style on the line above
+- Explanation of DevOps flow used to deploy this website, mentioning CloudFormation and CodePipeline
+	- Short 30 second video made on iMovie to show me editing dev branch to add new 'project article*', pipeline, test URL, merge on Github, pipeline, prod URL
+- A link to my Github for HomeAutomation - maybe even short video of lights changing? Timelapse?
+- DJ section with music loves and link to a few mixes and some of my fav mixes by other artists
+ - 'HEAR SOME OF HIS OLD SCHOOL MIXES' link on Homepage should list all artists I like, some of their mixes and not just my mixes
+ - Leads on to link to private project I've worked on, React music app
+ - Section on why I built this site can be because I wanted something more interactive for the audience it's aimed at. Technical people interviewing technical people will get a far better understanding of the quality of the developer by looking directly at one of their projects. This is one of their projects. The DevOps pipeline used to build, maintain and update designs of this site. The focus on security (everything https), the use of a SPA, the focus on embedding resources into the SPA to reduce additional resource downloads (CSS, fonts), for compression added when serving from the AWS CDN (CloudFront), the good report Chrome gives you for this site in the Audit tab of the Dev Tools. All of these things, a company can snoop on directly but viewing this online, interactive 'CV'. All of these things help articulate the attention to detail Rob offers, even when working on something personal. All of these things help prove how well-rounded Rob, which I hope, may be what you're looking for as a company.
+
+Make it a fun site with fun language - a place people want to read on.
+
+
+TODOs:
+- Removing the animation on the title and 3 x interests (homepage) but maybe could redo these and ease-in interest A first, then B etc.
+- Dark grey bar at top does not persist like it does in the design (probably due to lack of JS now)
+
+
+Source of CV information:
+- old CV
+- internal work CV
+- annual PERFs and WRFs
