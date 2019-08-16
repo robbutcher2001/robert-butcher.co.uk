@@ -7,6 +7,8 @@ import SynopsisSquare from '../../components/synopsis-square';
 import { professionalOverviewContent } from '../../content/projects/synopses/professional-overview';
 import { personalOverviewContent } from '../../content/projects/synopses/personal-overview';
 
+import { govServiceContent } from '../../content/projects/synopses/gov-service';
+import { govFrontendContent } from '../../content/projects/synopses/gov-frontend';
 import { uniContent } from '../../content/projects/synopses/uni';
 import { telcoContent } from '../../content/projects/synopses/telco';
 import { railContent } from '../../content/projects/synopses/rail';
@@ -28,6 +30,22 @@ export default () => (
         <p>{professionalOverviewContent.proseA}</p>
         <p>{professionalOverviewContent.proseB}</p>
         <section className='features'>
+          <SynopsisSquare
+            title={govServiceContent.title}
+            prose={govServiceContent.prose}
+            imageUrl={govServiceContent.imageUrl}
+            imageLink={govServiceContent.imageLink}
+            buttonText={govServiceContent.buttonText}
+            buttonLink={govServiceContent.buttonLink}
+          />
+          <SynopsisSquare
+            title={govFrontendContent.title}
+            prose={govFrontendContent.prose}
+            imageUrl={govFrontendContent.imageUrl}
+            imageLink={govFrontendContent.imageLink}
+            buttonText={govFrontendContent.buttonText}
+            buttonLink={govFrontendContent.buttonLink}
+          />
           <SynopsisSquare
             title={uniContent.title}
             prose={uniContent.prose}
