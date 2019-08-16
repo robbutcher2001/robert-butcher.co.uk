@@ -1,7 +1,7 @@
 const govFrontendContent = {
-  title: 'Government U.K. (Frontend)',
+  title: 'Government (Frontend)',
   prose: 'Lead React Developer for a UI consuming a graph database.',
-  imageUrl: '/content/images/gov2.png',
+  imageUrl: '/content/images/gov3.jpg',
   imageLink: '/projects/gov-frontend',
   buttonText: 'Learn more',
   buttonLink: '/projects/gov-frontend'
