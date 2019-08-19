@@ -1,4 +1,5 @@
 import React from 'react';
+import Gist from 'react-gist';
 
 import Header from '../../components/header';
 import { headerContent } from '../../content/projects/full-pages/header';
@@ -27,10 +28,11 @@ export default () => (
         <div className='inner'>
           <h3 className='major'>{content.dates}</h3>
           {content.prose.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))
+            <p key={i}>{p}</p>
+          ))
           }
           <pre><code>{content.code}</code></pre>
+          <Gist id='46e780a7939e61d1337fca413f5dbbbb' />
         </div>
       </div>
     </section>
