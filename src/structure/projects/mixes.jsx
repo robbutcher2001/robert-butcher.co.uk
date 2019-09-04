@@ -39,6 +39,8 @@ export default () => (
             ))
           }
           <iframe width='100%' height='60' src={content.mixC} frameborder='0' ></iframe>
+          <iframe width='100%' height='60' src={content.mixD} frameborder='0' ></iframe>
+          <iframe width='100%' height='60' src={content.mixE} frameborder='0' ></iframe>
         </div>
       </div>
     </section>
