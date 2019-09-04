@@ -1,11 +1,10 @@
 import React from 'react';
-import Gist from 'react-embed-gist';
 
 import Header from '../../components/header';
 import { headerContent } from '../../content/projects/full-pages/header';
 
 import Banner from '../../components/banner';
-import content from '../../content/projects/full-pages/uni';
+import content from '../../content/projects/full-pages/mixes';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -21,21 +20,27 @@ export default () => (
       title={content.title}
       logoUrl={content.logoUrl}
       logoLink={content.logoLink}
-      prose={content.role}
     />
     <section id='wrapper'>
       <div className='wrapper'>
         <div className='inner'>
-          <h3 className='major'>{content.dates}</h3>
-          {content.prose.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))
+          {content.proseA.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
           }
-          <pre><code>{content.code}</code></pre>
-          <Gist
-            gist='robbutcher2001/46e780a7939e61d1337fca413f5dbbbb'
-            loadingClass='loading__screen'
-          />
+          <iframe width='100%' height='60' src={content.mixA} frameborder='0' ></iframe>
+          {content.proseB.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
+          <iframe width='100%' height='60' src={content.mixB} frameborder='0' ></iframe>
+          {content.proseC.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
+          <iframe width='100%' height='60' src={content.mixC} frameborder='0' ></iframe>
+          <iframe width='100%' height='60' src={content.mixD} frameborder='0' ></iframe>
+          <iframe width='100%' height='60' src={content.mixE} frameborder='0' ></iframe>
         </div>
       </div>
     </section>
