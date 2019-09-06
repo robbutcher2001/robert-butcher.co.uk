@@ -16,10 +16,10 @@ export default () => (
       topButtonLink={headerContent.topButtonLink}
     />
     <Banner
-      title='Page Doesnt exist yet'
-      logoUrl=''
+      title='Page doesnt exist yet'
+      logoUrl='/content/images/404.jpg'
       logoLink=''
-      prose='Rob still needs to write this bit'
+      prose='Rob still needs to write this bit.'
     />
     <Footer
       title={footerContent.title}
