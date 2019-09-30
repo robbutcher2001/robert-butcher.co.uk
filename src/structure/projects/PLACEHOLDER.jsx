@@ -15,12 +15,19 @@ export default () => (
       topButtonText={headerContent.topButtonText}
       topButtonLink={headerContent.topButtonLink}
     />
-    <Banner
-      title='Page doesnt exist yet'
-      logoUrl='/content/images/404.jpg'
-      logoLink=''
-      prose='Rob still needs to write this bit.'
-    />
+    <section id='wrapper'>
+      <Banner
+        title='404, Sorry.'
+        logoUrl='/content/images/404.jpg'
+        logoLink=''
+        prose=''
+      />
+      <div className='wrapper'>
+        <div className='inner'>
+          <p>Page doesn't exist yet, Rob still needs to write this bit.</p>
+        </div>
+      </div>
+    </section>
     <Footer
       title={footerContent.title}
       prose={footerContent.prose}

@@ -31,7 +31,9 @@ export default () => (
         <Route exact path='/projects/rail' component={Rail} />
         <Route exact path='/projects/cdo2' component={CDO2} />
         <Route exact path='/projects/automated-flat' component={PlaceHolder} />
+        <Route exact path='/projects/devops' component={PlaceHolder} />
         <Route exact path='/projects/mixes' component={mixes} />
+        <Route exact path='/projects/music-app' component={PlaceHolder} />
         <Route exact path='/projects/this-site' component={PlaceHolder} />
         <Route exact path='/projects' component={Projects} />
         <Route exact path='/' component={Homepage} />
