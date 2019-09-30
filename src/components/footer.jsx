@@ -47,7 +47,7 @@ export default ({
         </li>
       </ul>
       <ul className='copyright'>
-        <li>&copy; Rob Butcher</li><li>Design: <a href='https://html5up.net' target='_blank'>HTML5 UP</a> but ported to React by Rob.</li>
+        <li>&copy; Rob Butcher</li><li>Design: <a href='https://html5up.net' target='_blank'>HTML5 UP</a> but written in React by Rob.</li>
       </ul>
     </div>
   </section>
