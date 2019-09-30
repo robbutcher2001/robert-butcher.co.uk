@@ -4,6 +4,7 @@ import Header from '../../components/header';
 import { headerContent } from '../../content/projects/full-pages/header';
 
 import Banner from '../../components/banner';
+import { govFrontendContent } from '../../content/projects/full-pages/gov-frontend';
 
 import Footer from '../../components/footer';
 import { footerContent } from '../../content/footer';
@@ -16,11 +17,22 @@ export default () => (
       topButtonLink={headerContent.topButtonLink}
     />
     <Banner
-      title='Page doesnt exist yet'
-      logoUrl='/content/images/404.jpg'
-      logoLink=''
-      prose='Rob still needs to write this bit.'
+      title={govFrontendContent.title}
+      logoUrl={govFrontendContent.logoUrl}
+      logoLink={govFrontendContent.logoLink}
+      prose={govFrontendContent.role}
     />
+    <section id='wrapper'>
+      <div className='wrapper'>
+        <div className='inner'>
+          <h3 className='major'>{govFrontendContent.dates}</h3>
+          {govFrontendContent.prose.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))
+          }
+        </div>
+      </div>
+    </section>
     <Footer
       title={footerContent.title}
       prose={footerContent.prose}
