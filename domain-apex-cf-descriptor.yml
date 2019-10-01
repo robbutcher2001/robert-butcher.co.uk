@@ -105,8 +105,7 @@ Resources:
         Fn::Join: [ '-', [ 'ContactFormSubmissionRole', !Ref Env ] ]
       Handler: lambda/api/contact-form-submission.handler
       Runtime: nodejs10.x
-      CodeUri:
-        Fn::Join: [ '/', [ 's3://', 'lambda-source-location', '%{LambdaSourceKey}' ] ]
+      CodeUri: s3://lambda-source-location/%{LambdaSourceKey}
       Role:
         Fn::GetAtt:
           - ContactFormSubmissionRole
