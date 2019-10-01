@@ -1,13 +1,16 @@
 'use strict';
 
 exports.handler = (event, context, callback) => {
-    //console.log('Received event:', JSON.stringify(event, null, 2));
+    const payload = {
+        thing: 'I did a thing on own website'
+    };
+
     const response = {
         "statusCode": 200,
         "headers": {
             "Content-Type": "application/json"
         },
-        "body": JSON.stringify("{'thing?': 'I did a thing on own website'}"),
+        "body": JSON.stringify(payload),
         "isBase64Encoded": false
     };
 
