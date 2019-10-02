@@ -47,7 +47,7 @@ export default class ContactForm extends Component {
                 this.setState({
                     ui: {
                         loading: false,
-                        success: resp.thing//message
+                        success: resp.data.thing//message
                     }
                 });
             })
