@@ -185,6 +185,10 @@ Resources:
           - POST
           - HEAD
           - OPTIONS
+          - PUT
+          - PATCH
+          - POST
+          - DELETE
           TargetOriginId:
             Fn::Join: [ '', [ 'origin-', !Ref Api, '.execute-api.', !Ref 'AWS::Region', '.amazonaws.com' ] ]
           PathPattern: '/api/*'
