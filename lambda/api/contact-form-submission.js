@@ -13,15 +13,25 @@ const apiGatewayResp = payload => ({
 });
 
 exports.handler = (event, context, callback) => {
-    console.log('da event is: ', JSON.stringify(event));
+    const payload = JSON.parse(event.body);
+
     const config = {
         Destination: {
             ToAddresses: [ process.env.TO_EMAIL_ADDRESS ]
         },
         Message: {
             Body: {
-                Text: {
-                    Data: 'STRING_VALUE',
+                Html: {
+                    Data: `
+                    <p>
+                        <b>Name: </b>${payload.name}
+                    </p>
+                    <p>
+                        <b>Email: </b>${payload.email}
+                    </p>
+                    <p>
+                        <b>Message: </b>${payload.message}
+                    </p>`,
                     Charset: 'UTF-8'
                 }
             },
@@ -33,8 +43,7 @@ exports.handler = (event, context, callback) => {
         Source: process.env.TO_EMAIL_ADDRESS
     };
 
-    ses.sendEmail(config, (err, data) => {
-        console.log(data);
+    ses.sendEmail(config, err => {
         if (!err) {
             callback(null, apiGatewayResp({
                 message: 'Thank you for your message, Rob will be in touch soon.'
