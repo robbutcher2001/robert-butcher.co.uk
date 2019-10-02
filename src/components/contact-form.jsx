@@ -123,6 +123,7 @@ export default class ContactForm extends Component {
                         {this.state.ui.loading &&
                             <p>Submitting..</p>
                         }
+                        <p>{this.state.ui.success}</p>
                     </li>
                 </ul>
             </form>
