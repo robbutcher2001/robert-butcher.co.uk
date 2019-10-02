@@ -1,21 +1,44 @@
 'use strict';
 
+const apiGatewayResp = payload => ({
+    statusCode: 200,
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload),
+    isBase64Encoded: false
+});
+
 exports.handler = (event, context, callback) => {
-    const payload = {
-        thing: 'I did a thing on own website'
-    };
-
-    const response = {
-        "statusCode": 200,
-        "headers": {
-            "Content-Type": "application/json"
+    console.log('da event is: ', JSON.stringify(event));
+    const config = {
+        Destination: {
+            ToAddresses: [ process.env.TO_EMAIL_ADDRESS ]
         },
-        "body": JSON.stringify(payload),
-        "isBase64Encoded": false
+        Message: {
+            Body: {
+                Text: {
+                    Data: 'STRING_VALUE',
+                    Charset: 'UTF-8'
+                }
+            },
+            Subject: {
+                Data: 'Direct robertbutcher.co.uk Contact',
+                Charset: 'UTF-8'
+            }
+        },
+        Source: process.env.TO_EMAIL_ADDRESS
     };
 
-    console.log('value1 =', event.key1);
-    console.log('value2 =', event.key2);
-    console.log('value3 =', event.key3);
-    callback(null, response);  // Echo back the first key value
+    ses.sendEmail(config, (err, data) => {
+        console.log(data);
+        if (!err) {
+            callback(null, apiGatewayResp({
+                message: 'Thank you for your message, Rob will be in touch soon.'
+            }));
+        }
+        else {
+            callback(err);
+        }
+    });
 };

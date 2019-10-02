@@ -12,6 +12,8 @@ Parameters:
     Type: String
   S3OriginAccessIdentity:
     Type: String
+  ToEmailAddress:
+    Type: String
 Conditions:
   CreateProdResources: !Equals [ !Ref Env, 'prod' ]
 Resources:
@@ -111,12 +113,15 @@ Resources:
           - ContactFormSubmissionRole
           - Arn
       Timeout: 30
+      Environment:
+        Variables:
+          TO_EMAIL_ADDRESS: !Ref ToEmailAddress
       Events:
         BasicGet:
           Type: Api
           Properties:
-            Path: /api/hello
-            Method: get
+            Path: /api/contact
+            Method: post
             RestApiId: !Ref Api
   Api:
     Type: AWS::Serverless::Api

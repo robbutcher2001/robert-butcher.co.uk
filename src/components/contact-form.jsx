@@ -27,7 +27,6 @@ export default class ContactForm extends Component {
         this.setState(prevState => {
             const newState = { ...prevState };
             newState.form[field.toLowerCase()] = userInput;
-            console.log(newState);
 
             return newState;
         });
@@ -41,13 +40,17 @@ export default class ContactForm extends Component {
             }
         });
 
-        axios.get('/api/hello')
+        axios({
+            method: 'post',
+            url: '/api/contact',
+            data: JSON.stringify(this.state.form)
+        })
             .then(resp => {
-                console.log(resp);
                 this.setState({
                     ui: {
                         loading: false,
-                        success: resp.data.thing//message
+                        success: resp.data.message,
+                        error: null
                     }
                 });
             })
@@ -55,30 +58,14 @@ export default class ContactForm extends Component {
                 this.setState({
                     ui: {
                         loading: false,
+                        success: null,
                         error: error.message
                     }
                 });
-            })
-            .finally(() => {
-                // this.setState({
-                //     ui: {
-                //         loading: false
-                //     }
-                // });
             });
-
-        // this.props.fireLoginRequest(this.state);
     }
 
     render() {
-        console.log(this.state);
-
-        // if (this.state.ui.loading) {
-        //     return (
-        //         <div>Submitting..</div>
-        //     );
-        // }
-
         return (
             <form method='post' onSubmit={event => this.onHandleSubmit(event)}>
                 <div className='field'>
@@ -121,9 +108,10 @@ export default class ContactForm extends Component {
                 <ul className='actions'>
                     <li>
                         {this.state.ui.loading &&
-                            <p>Submitting..</p>
+                            <p className='submitting'>Submitting..</p>
                         }
-                        <p>{this.state.ui.success}</p>
+                        <p className='success'>{this.state.ui.success}</p>
+                        <p className='error'>{this.state.ui.error}</p>
                     </li>
                 </ul>
             </form>
