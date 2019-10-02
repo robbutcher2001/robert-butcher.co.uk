@@ -182,7 +182,7 @@ Resources:
           Compress: true
         CacheBehaviors:
         - AllowedMethods:
-          - POST
+          - GET
           - HEAD
           - OPTIONS
           - PUT
