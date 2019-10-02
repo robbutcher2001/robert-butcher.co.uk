@@ -42,7 +42,7 @@ export default class ContactForm extends Component {
 
         axios({
             method: 'post',
-            url: '/api/contact',
+            url: this.props.postUrl,
             data: JSON.stringify(this.state.form)
         })
             .then(resp => {
