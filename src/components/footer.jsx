@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ContactForm from './contact-form';
+
 export default ({
   title,
   prose,
@@ -15,23 +17,14 @@ export default ({
     <div className='inner'>
       <h2 className='major'>{title}</h2>
       <p>{prose}</p>
-      <form method='post' action={postUrl}>
-        <div className='field'>
-          <label htmlFor={fieldA.toLowerCase()}>{fieldA}</label>
-          <input type='text' autoComplete={fieldA.toLowerCase()} name={fieldA.toLowerCase()} id={fieldA.toLowerCase()} />
-        </div>
-        <div className='field'>
-          <label htmlFor={fieldB.toLowerCase()}>{fieldB}</label>
-          <input type='email' autoComplete={fieldB.toLowerCase()} name={fieldB.toLowerCase()} id={fieldB.toLowerCase()} />
-        </div>
-        <div className='field'>
-          <label htmlFor={fieldC.toLowerCase()}>{fieldC}</label>
-          <textarea name={fieldC.toLowerCase()} id={fieldC.toLowerCase()} rows='4'></textarea>
-        </div>
-        <ul className='actions'>
-          <li><input type='submit' value={submitMessage} /></li>
-        </ul>
-      </form>
+      <ContactForm
+        postUrl={postUrl}
+        fieldA={fieldA}
+        fieldB={fieldB}
+        fieldC={fieldC}
+        submitMessage={submitMessage}
+      >
+      </ContactForm>
       <ul className='fa-ul contact'>
         <li>
           <span className='fa-li'>
