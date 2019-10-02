@@ -1,7 +1,7 @@
 const footerContent = {
   title: 'Give Rob a shout',
   prose: 'If there\'s anything you want to ask Rob about, he\'s all ears (trust me)..',
-  postUrl: '/cannot-post-yet-sozza!',
+  postUrl: '/api/contact',
   fieldA: 'Name',
   fieldB: 'Email',
   fieldC: 'Message',
