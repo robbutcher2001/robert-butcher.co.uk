@@ -1,5 +1,7 @@
 'use strict';
 
+const ses = new AWS.SES({apiVersion: '2010-12-01'});
+
 const apiGatewayResp = payload => ({
     statusCode: 200,
     headers: {
