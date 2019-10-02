@@ -182,7 +182,7 @@ Resources:
           Compress: true
         CacheBehaviors:
         - AllowedMethods:
-          - GET
+          - POST
           - HEAD
           - OPTIONS
           TargetOriginId:
