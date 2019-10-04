@@ -1,7 +1,7 @@
 'use strict';
 
 const AWS = require('aws-sdk');
-const ses = new AWS.SES({apiVersion: '2010-12-01'});
+const ses = new AWS.SES({ apiVersion: '2010-12-01' });
 
 const apiGatewayResp = payload => ({
     statusCode: 200,
@@ -12,12 +12,31 @@ const apiGatewayResp = payload => ({
     isBase64Encoded: false
 });
 
+const validatePayload = (payload, context, callback) => {
+    const formValid = payload =>
+        payload && Object.keys(payload).every(key =>
+            payload[key].length > 2);
+
+    if (!formValid) {
+        callback(JSON.stringify({
+            errorType: 'Bad Request',
+            httpStatus: 400,
+            requestId: context.awsRequestId,
+            trace: {
+                validation: 'failed'
+            }
+        }));
+    }
+};
+
 exports.handler = (event, context, callback) => {
     const payload = JSON.parse(event.body);
 
+    validatePayload(payload, context, callback);
+
     const config = {
         Destination: {
-            ToAddresses: [ process.env.TO_EMAIL_ADDRESS ]
+            ToAddresses: [process.env.TO_EMAIL_ADDRESS]
         },
         Message: {
             Body: {
