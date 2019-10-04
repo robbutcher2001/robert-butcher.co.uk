@@ -2,12 +2,17 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 
+const formValid = contents =>
+    Object.keys(contents).every(content =>
+        contents[content].length > 2);
+
 export default class ContactForm extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
             ui: {
+                disableSubmit: true,
                 loading: false,
                 success: null,
                 error: null
@@ -27,6 +32,7 @@ export default class ContactForm extends Component {
         this.setState(prevState => {
             const newState = { ...prevState };
             newState.form[field.toLowerCase()] = userInput;
+            newState.ui.disableSubmit = !formValid(newState.form);
 
             return newState;
         });
@@ -102,6 +108,7 @@ export default class ContactForm extends Component {
                         <input
                             type='submit'
                             value={this.props.submitMessage}
+                            disabled={this.state.ui.disableSubmit}
                         />
                     </li>
                 </ul>
