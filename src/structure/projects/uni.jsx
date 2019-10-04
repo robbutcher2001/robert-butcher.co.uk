@@ -31,11 +31,20 @@ export default () => (
             <p key={i}>{p}</p>
           ))
           }
-          <pre><code>{content.code}</code></pre>
+          <h3>Code Snippet</h3>
+          <p>{content.codeSnippetTitle}</p>
           <Gist
-            gist='robbutcher2001/46e780a7939e61d1337fca413f5dbbbb'
+            gist='robbutcher2001/d7bc1283c481819a8d58d8f62483bb6d'
             loadingClass='loading__screen'
           />
+          <p>{content.codeSnippetProse}</p>
+          <ul>
+            {content.codeSnippetStepThrough.map((p, i) => (
+              <li key={i}>{p}</li>
+            ))
+            }
+          </ul>
+          <p>{content.codeSnippetEnd}<a href={content.codeSnippetLink} target='_blank'>{content.codeSnippetLinkText}</a></p>
         </div>
       </div>
     </section>
