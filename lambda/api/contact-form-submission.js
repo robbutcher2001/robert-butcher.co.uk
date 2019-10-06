@@ -15,11 +15,13 @@ const apiGatewayResp = payload => ({
 const validatePayload = (payload, context, callback) => {
     const validSize = 2;
 
-    const formValid = payload =>
+    const formValid =
         payload && payload.name && payload.name.length > validSize &&
         payload.email && payload.email.length > validSize &&
         payload.message && payload.message.length > validSize;
 
+    console.log('is valid? ' + formValid);
+    console.log('payload in validation func: ' + payload);
     if (!formValid) {
         callback(JSON.stringify({
             errorType: 'Bad Request',
@@ -35,6 +37,7 @@ const validatePayload = (payload, context, callback) => {
 exports.handler = (event, context, callback) => {
     const payload = JSON.parse(event.body);
 
+    console.log('payload: ' + payload);
     validatePayload(payload, context, callback);
 
     const config = {

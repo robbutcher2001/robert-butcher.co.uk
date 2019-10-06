@@ -104,7 +104,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName:
-        Fn::Join: [ '-', [ 'ContactFormSubmissionRole', !Ref Env ] ]
+        Fn::Join: [ '-', [ 'ContactFormSubmissionFunction', !Ref Env ] ]
       Handler: lambda/api/contact-form-submission.handler
       Runtime: nodejs10.x
       CodeUri: s3://lambda-source-location/%{LambdaSourceKey}
