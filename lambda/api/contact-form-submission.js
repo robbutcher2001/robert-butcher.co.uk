@@ -15,7 +15,7 @@ const apiGatewayResp = payload => ({
 const validatePayload = (payload, context, callback) => {
     const validSize = 2;
 
-    const formValid = payload =>
+    const formValid =
         payload && payload.name && payload.name.length > validSize &&
         payload.email && payload.email.length > validSize &&
         payload.message && payload.message.length > validSize;
