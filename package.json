@@ -8,7 +8,7 @@
     "build": "NODE_ENV=production webpack --config webpack/base.config.js"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-embed-gist": "1.0.8",
